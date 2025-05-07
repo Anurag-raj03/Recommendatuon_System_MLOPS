@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/e17109e14640474098cee2c7c6c63427/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: e17109e14640474098cee2c7c6c63427
+run_name: angry-shrike-538
+run_uuid: e17109e14640474098cee2c7c6c63427
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745692973054
+status: 1
+tags: []
+user_id: root

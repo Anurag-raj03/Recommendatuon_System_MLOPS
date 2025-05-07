@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/f62fe0c3d65e440d8ef73a28730f5f6a/artifacts
+end_time: 1745670376383
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: f62fe0c3d65e440d8ef73a28730f5f6a
+run_name: carefree-mink-746
+run_uuid: f62fe0c3d65e440d8ef73a28730f5f6a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745670323188
+status: 3
+tags: []
+user_id: root

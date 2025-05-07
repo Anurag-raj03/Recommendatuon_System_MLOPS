@@ -1,0 +1,9 @@
+apache-airflow==2.7.0
+pandas
+numpy
+scikit-learn==1.4.0
+nltk
+mlflow
+joblib
+dvc
+psycopg2-binary

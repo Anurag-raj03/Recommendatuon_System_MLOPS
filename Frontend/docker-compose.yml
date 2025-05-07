@@ -1,0 +1,18 @@
+services:
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile.frontend
+    image: anuragraj03/mlops_recommendation/frontend_process:latest
+    container_name: frontend_container
+    volumes:
+      - ./Backend:/frontend_app/Backend/
+    ports:
+      - "8501:8501"  
+    networks:
+      - anime_network
+    depends_on:
+     - backend
+networks:
+  anime_network:
+   driver: bridge  

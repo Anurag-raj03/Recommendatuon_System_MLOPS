@@ -1,0 +1,26 @@
+services:
+  monitoring_app:
+    image: anuragraj03/mlops_recommendation/monitoring_apps:latest
+    container_name: monitoring_services
+    build:
+      context: ./monitoring
+      dockerfile: Dockerfile.monitoring
+    volumes:
+      - ./Data_Versioning:/monitoring_app/Data_Versioning/
+      - ./Preprocessing:/monitoring_app/Preprocessing/
+      - ./Data_Reading:/monitoring_app/Data_Reading/
+      - ./artifacts:/monitoring_app/artifacts/ 
+    networks:
+      - anime_network           
+  
+  mlflow_tracking:
+    image: ghcr.io/mlflow/mlflow:latest 
+    container_name: mlflow_tracking_container
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlflow_tracking:/mlflow
+    command: ["mlflow", "server", "--host", "0.0.0.0", "--port", "5000", "--backend-store-uri", "/mlflow"]  
+networks:
+  anime_network:
+    driver: bridge 

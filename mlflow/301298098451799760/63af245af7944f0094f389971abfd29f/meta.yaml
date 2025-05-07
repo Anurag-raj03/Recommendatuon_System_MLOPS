@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/63af245af7944f0094f389971abfd29f/artifacts
+end_time: 1744544023123
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: 63af245af7944f0094f389971abfd29f
+run_name: nimble-grouse-296
+run_uuid: 63af245af7944f0094f389971abfd29f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744544015122
+status: 3
+tags: []
+user_id: root

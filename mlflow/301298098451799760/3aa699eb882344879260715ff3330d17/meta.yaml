@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/3aa699eb882344879260715ff3330d17/artifacts
+end_time: 1745693717455
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: 3aa699eb882344879260715ff3330d17
+run_name: masked-pug-48
+run_uuid: 3aa699eb882344879260715ff3330d17
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745693701759
+status: 3
+tags: []
+user_id: root

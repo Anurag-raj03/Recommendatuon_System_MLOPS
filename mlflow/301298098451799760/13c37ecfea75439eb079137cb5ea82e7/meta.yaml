@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/13c37ecfea75439eb079137cb5ea82e7/artifacts
+end_time: 1745664959554
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: 13c37ecfea75439eb079137cb5ea82e7
+run_name: nebulous-horse-857
+run_uuid: 13c37ecfea75439eb079137cb5ea82e7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745664952690
+status: 3
+tags: []
+user_id: root

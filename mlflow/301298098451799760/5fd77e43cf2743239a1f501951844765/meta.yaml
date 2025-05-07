@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/5fd77e43cf2743239a1f501951844765/artifacts
+deleted_time: null
+end_time: null
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: 5fd77e43cf2743239a1f501951844765
+run_name: righteous-hound-736
+run_uuid: 5fd77e43cf2743239a1f501951844765
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745660178785
+status: 1
+tags: []
+user_id: root

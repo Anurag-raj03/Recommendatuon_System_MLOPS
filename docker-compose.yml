@@ -1,0 +1,112 @@
+version: "3.9"
+
+services:
+  airflow:
+    container_name: airflow
+    build:
+      context: ./airflow
+      dockerfile: Dockerfile.airflow
+    image: anuragraj03/mlops_recommendation/custom-airflow:latest
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__FERNET_KEY: uC1T-Hr2kGtB-E2kwM3rHbGZJWwCQ4fbJ_LzYf8cEjQ=
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
+      _PIP_ADDITIONAL_REQUIREMENTS: apache-airflow-providers-docker
+      DB_PATH_RAW: /opt/airflow/Database_connection/anime_dat.db
+      DB_PATH_PREPROCESSED: /opt/airflow/Database_connection/anime_preprocessed_dat.db
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - ./airflow/scripts:/opt/airflow/scripts
+      - ./airflow/config:/opt/airflow/config
+      - ./airflow/webserver_config.py:/opt/airflow/webserver_config.py
+      - ./airflow/config.py:/opt/airflow/config.py
+      - ./airflow/airflow.db:/opt/airflow/airflow.db
+      - ./Backend:/opt/airflow/Backend
+      - ./DATA:/opt/airflow/DATA
+      - ./Data_Reading:/opt/airflow/Data_Reading
+      - ./Data_Versioning:/opt/airflow/Data_Versioning
+      - ./Database_connection:/opt/airflow/Database_connection
+      - ./artifacts:/opt/airflow/artifacts
+      - ./monitoring:/opt/airflow/monitoring
+      - ./Preprocessing:/opt/airflow/Preprocessing
+      - ./psuedo_notebook:/opt/airflow/psuedo_notebook
+      - ./updated_run_monitoring:/opt/airflow/updated_run_monitoring
+    command: bash allrun.sh
+    restart: on-failure # 🚀 Auto-restart if error happens
+    networks:
+      - anime_network
+
+  backend:
+    container_name: anime_backend
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile.backend
+    image: anuragraj03/mlops_recommendation/backend_process:latest
+    environment:
+      DATABASE_PATH: /app/Database_connection/anime_dat.db
+      DATABASE_PATH2: /app/Database_connection/anime_preprocessed_dat.db
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./Backend:/app/Backend
+      - ./Database_connection:/app/Database_connection
+      - ./Data_Versioning:/app/Data_Versioning
+      - ./artifacts:/app/artifacts
+      - ./Data_Reading:/app/Data_Reading
+    restart: on-failure
+    networks:
+      - anime_network
+    depends_on:
+      - monitoring
+
+  frontend:
+    container_name: frontend_container
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile.front
+    image: anuragraj03/mlops_recommendation/frontend_process:latest
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./Backend:/app/Backend
+    restart: on-failure
+    networks:
+      - anime_network
+    depends_on:
+      - backend
+
+  monitoring:
+    container_name: monitoring_services
+    build:
+      context: ./monitoring
+      dockerfile: Dockerfile.monitoring
+    image: anuragraj03/mlops_recommendation/monitoring_apps:latest
+    volumes:
+      - ./Preprocessing:/app/Preprocessing
+      - ./Data_Versioning:/app/Data_Versioning
+      - ./Data_Reading:/app/Data_Reading
+      - ./artifacts:/app/artifacts
+      - ./DATA:/app/DATA
+    restart: on-failure
+    networks:
+      - anime_network
+
+  mlflow:
+    container_name: mlflow_tracking_container
+    image: ghcr.io/mlflow/mlflow:latest
+    command: mlflow server --host 0.0.0.0 --port 5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlflow:/mlflow
+    restart: on-failure
+    networks:
+      - anime_network
+
+networks:
+  anime_network:
+    driver: bridge

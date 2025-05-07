@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/925fa25c109d49a28766e77f9de86c03/artifacts
+end_time: 1745664119901
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: 925fa25c109d49a28766e77f9de86c03
+run_name: stylish-rook-708
+run_uuid: 925fa25c109d49a28766e77f9de86c03
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745664115318
+status: 3
+tags: []
+user_id: root

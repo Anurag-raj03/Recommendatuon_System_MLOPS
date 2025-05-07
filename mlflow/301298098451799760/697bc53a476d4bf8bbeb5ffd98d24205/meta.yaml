@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/697bc53a476d4bf8bbeb5ffd98d24205/artifacts
+end_time: 1745671417360
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: 697bc53a476d4bf8bbeb5ffd98d24205
+run_name: lyrical-bear-562
+run_uuid: 697bc53a476d4bf8bbeb5ffd98d24205
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745671413715
+status: 3
+tags: []
+user_id: root

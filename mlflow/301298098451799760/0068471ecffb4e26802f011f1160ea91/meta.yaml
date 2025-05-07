@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/0068471ecffb4e26802f011f1160ea91/artifacts
+end_time: 1745690839968
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: 0068471ecffb4e26802f011f1160ea91
+run_name: bright-bass-951
+run_uuid: 0068471ecffb4e26802f011f1160ea91
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745690833605
+status: 3
+tags: []
+user_id: root

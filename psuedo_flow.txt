@@ -1,0 +1,450 @@
+DATABASE volume-->/Nothing ->Run -> db_init.py -> Restart -> always
+
+MONITORING volume --> /Preprocessing /DVC_FOLDER /artifact /DATA -> RUN model_register.py -> RUN Pipeline.py -> RUN main_pipeline.py 
+      In this MLFLOW UI also will be run automatically attached in this
+
+BACKEND volume --> /DVC_FOLDER /artifact /Database_connection->  RUN main:app 
+
+FRONTEND volume --> /BACKEND -> RUN app.py -> Restart always 
+
+AIRFLOW volume -->/BACKEND /updated_run /Database_connection /artifact  -> RUN etl_pipeline.py
+
+adduser@DESKTOP-9D7U3UR:/mnt/c/Users/Anurag/OneDrive/Desktop/macine_operation/Recommendation_CICD$ docker compose build
+WARN[0014] /mnt/c/Users/Anurag/OneDrive/Desktop/macine_operation/Recommendation_CICD/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+Compose now can delegate build to bake for better performances
+Just set COMPOSE_BAKE=true
+[+] Building 27.2s (4/4) FINISHED                                                                                                                                  docker:default
+ => [backend internal] load build definition from Dockerfile                                                                                                                18.7s
+ => => transferring dockerfile: 265B                                                                                                                                         5.0s
+ => [monitoring internal] load build definition from Dockerfile                                                                                                             23.3s
+ => => transferring dockerfile: 313B                                                                                                                                         5.2s
+ => [anime_db_service internal] load build definition from Dockerfile                                                                                                       13.5s
+ => => transferring dockerfile: 2B                                                                                                                                           1.0s
+ => CANCELED [monitoring internal] load metadata for docker.io/library/python:3.11                                                                                           3.9s
+WARN[0071] current commit information was not captured by the build  error="failed to read current commit information with git rev-parse --is-inside-work-tree"
+failed to run Build function: failed to read dockerfile: open Dockerfile: no such file or directory
+
+
+WARN[0002] /mnt/c/Users/Anurag/OneDrive/Desktop/macine_operation/Recommendation_CICD/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] Running 5/5
+ ✔ Container airflow_scheduler    Running                                                                                                                                    0.0s 
+ ✔ Container mysql_db             Running                                                                                                                                    0.0s 
+ ✔ Container airflow_webserver    Running                                                                                                                                    0.0s 
+ ✔ Container monitoring_services  Created                                                                                                                                    0.1s 
+ ✔ Container mlflow_trackings     Recreated                                                                                                                                  3.3s 
+Attaching to airflow_scheduler, airflow_webserver, anime_backend, anime_db_service, anime_frontend, mlflow_trackings, monitoring_services, mysql_db
+mysql_db             | Srk225307@ mysql_db anime_db 3306 root loaded_anime_db 3306
+mysql_db             | Traceback (most recent call last):
+mysql_db             |   File "/usr/local/lib/python3.11/site-packages/pymysql/connections.py", line 649, in connect
+mysql_db             |     sock = socket.create_connection(                                                                                                                       
+mysql_db             |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+mysql_db             |   File "/usr/local/lib/python3.11/socket.py", line 863, in create_connection
+mysql_db             |     raise exceptions[0]                                                                                                                                    
+mysql_db             |   File "/usr/local/lib/python3.11/socket.py", line 848, in create_connection                                                                               
+mysql_db             |     sock.connect(sa)                                                                                                                                       
+mysql_db             | ConnectionRefusedError: [Errno 111] Connection refused
+mysql_db             | 
+mysql_db             | During handling of the above exception, another exception occurred:
+mysql_db             | 
+mysql_db             | Traceback (most recent call last):
+mysql_db             |   File "/database_app/db_init.py", line 156, in <module>
+mysql_db             |     create_database()
+mysql_db             |   File "/database_app/db_init.py", line 25, in create_database
+mysql_db             |     conn=pymysql.connect(host=DB_HOST,user=DB_USER,password=DB_PASSWORD,port=int(DB_PORT))
+mysql_db             |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+mysql_db             |   File "/usr/local/lib/python3.11/site-packages/pymysql/connections.py", line 361, in __init__
+mysql_db             |     self.connect()
+mysql_db             |   File "/usr/local/lib/python3.11/site-packages/pymysql/connections.py", line 716, in connect
+mysql_db             |     raise exc
+mysql_db             | pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'mysql_db' ([Errno 111] Connection refused)")
+dependency failed to start: container mysql_db is unhealthy
+adduser@DESKTOP-9D7U3UR:/mnt/c/Users/Anurag/OneDrive/Desktop/macine_operation/Recommendation_CICD$
+w Enable Watch
+
+
+=> ERROR [mysql_db 7/8] RUN chomd +x /database_app/wait-for-mysql.sh                                                                                                       25.0s 
+------
+ > [mysql_db 7/8] RUN chomd +x /database_app/wait-for-mysql.sh:
+21.88 /bin/sh: 1: chomd: not found
+------
+failed to solve: process "/bin/sh -c chomd +x /database_app/wait-for-mysql.sh" did not complete successfully: exit code: 127      
+
+ => [airflow-webserver 8/8] RUN airflow db init                                                                                                                             21.2s 
+ => [monitoring] resolving provenance for metadata file                                                                                                                      0.1s 
+------
+ > [mysql_db 7/8] RUN chomd +x /database_app/wait-for-mysql.sh:
+12.93 /bin/sh: 1: chomd: not found
+------
+failed to solve: process "/bin/sh -c chomd +x /database_app/wait-for-mysql.sh" did not complete successfully: exit code: 127
+
+
+FROM python:3.11
+WORKDIR /database_app
+COPY requirements.txt /database_app/
+COPY .env /database_app/.env
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . /database_app
+RUN chmod +x /database_app/wait-for-mysql.sh
+EXPOSE 3306
+CMD ["/bin/bash","wait-for-mysql.sh"]
+
+
+anime_db_service     | wait-for-mysql.sh: line 2: nc: command not found
+mysql_db             | wait-for-mysql.sh: line 2: nc: command not found
+anime_db_service     | wait-for-mysql.sh: line 2: nc: command not found
+mysql_db             | wait-for-mysql.sh: line 2: nc: command not found
+anime_db_service     | wait-for-mysql.sh: line 2: nc: command not found
+mysql_db             | wait-for-mysql.sh: line 2: nc: command not found
+anime_db_service     | wait-for-mysql.sh: line 2: nc: command not found
+mysql_db             | wait-for-mysql.sh: line 2: nc: command not found
+anime_db_service     | wait-for-mysql.sh: line 2: nc: command not found
+anime_db_service     | wait-for-mysql.sh: line 2: nc: command not found
+mysql_db             | wait-for-mysql.sh: line 2: nc: command not found
+anime_db_service     | wait-for-mysql.sh: line 2: nc: command not found
+
+
+
+ => [airflow-webserver] resolving provenance for metadata file                                                                                                               0.0s 
+[+] Running 14/14
+ ✔ airflow-webserver              Built                                                                                                                                      0.0s 
+ ✔ anime_db_service               Built                                                                                                                                      0.0s 
+ ✔ backend                        Built                                                                                                                                      0.0s 
+ ✔ frontend                       Built                                                                                                                                      0.0s 
+ ✔ monitoring                     Built                                                                                                                                      0.0s 
+ ✔ mysql_db                       Built                                                                                                                                      0.0s 
+ ✔ Container monitoring_services  Created                                                                                                                                    0.0s 
+ ✔ Container mlflow_trackings     Created                                                                                                                                    0.0s 
+ ✔ Container anime_db_service     Recreated                                                                                                                                  3.6s 
+ ✔ Container mysql_db             Recreated                                                                                                                                  1.2s 
+ ✔ Container anime_backend        Created                                                                                                                                    0.0s 
+ ✔ Container anime_frontend       Created                                                                                                                                    0.0s 
+ ✔ Container airflow_webserver    Created                                                                                                                                    0.0s 
+ ✔ Container airflow_scheduler    Created                                                                                                                                    0.0s 
+Attaching to airflow_scheduler, airflow_webserver, anime_backend, anime_db_service, anime_frontend, mlflow_trackings, monitoring_services, mysql_db
+mysql_db             | Waiting for MYSQL to be ready ...
+anime_db_service     | Waiting for MYSQL to be ready ...
+anime_frontend       | 
+anime_frontend       | Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+anime_frontend       |                                                                                                                                                            
+anime_frontend       |                                                                                                                                                            
+anime_frontend       |   You can now view your Streamlit app in your browser.
+anime_frontend       |                                                                                                                                                            
+anime_frontend       |   URL: http://0.0.0.0:8501                                                                                                                                 
+anime_frontend       |                                                                                                                                                            
+anime_backend        | Traceback (most recent call last):                                                                                                                         
+anime_backend        |   File "/usr/local/bin/uvicorn", line 8, in <module>
+anime_backend        |     sys.exit(main())                                                                                                                                       
+anime_backend        |              ^^^^^^                                                                                                                                        
+anime_backend        |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1161, in __call__                                                                     
+anime_backend        |     return self.main(*args, **kwargs)                                                                                                                      
+anime_backend        |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+anime_backend        |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1082, in main                                                                         
+anime_backend        |     rv = self.invoke(ctx)                                                                                                                                  
+anime_backend        |          ^^^^^^^^^^^^^^^^                                                                                                                                  
+anime_backend        |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 1443, in invoke                                                                       
+anime_backend        |     return ctx.invoke(self.callback, **ctx.params)                                                                                                         
+anime_backend        |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                         
+anime_backend        |   File "/usr/local/lib/python3.11/site-packages/click/core.py", line 788, in invoke                                                                        
+anime_backend        |     return __callback(*args, **kwargs)                                                                                                                     
+anime_backend        |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                                     
+anime_backend        |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 412, in main                                                                        
+anime_backend        |     run(                                                                                                                                                   
+anime_backend        |   File "/usr/local/lib/python3.11/site-packages/uvicorn/main.py", line 579, in run
+anime_backend        |     server.run()                                                                                                                                           
+anime_backend        |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 66, in run
+anime_backend        |     return asyncio.run(self.serve(sockets=sockets))                                                                                                        
+anime_backend        |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                        
+anime_backend        |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run                                                                                    
+anime_backend        |     return runner.run(main)                                                                                                                                
+anime_backend        |            ^^^^^^^^^^^^^^^^
+anime_backend        |   File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run                                                                                    
+anime_backend        |     return self._loop.run_until_complete(task)                                                                                                             
+anime_backend        |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                             
+anime_backend        |   File "/usr/local/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete                                                                 
+anime_backend        |     return future.result()                                                                                                                                 
+anime_backend        |            ^^^^^^^^^^^^^^^
+anime_backend        |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 70, in serve                                                                      
+anime_backend        |     await self._serve(sockets)                                                                                                                             
+anime_backend        |   File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 77, in _serve                                                                     
+anime_backend        |     config.load()                                                                                                                                          
+anime_backend        |   File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 435, in load                                                                      
+anime_backend        |     self.loaded_app = import_from_string(self.app)                                                                                                         
+anime_backend        |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                         
+anime_backend        |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 22, in import_from_string                                                       
+anime_backend        |     raise exc from None                                                                                                                                    
+anime_backend        |   File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+anime_backend        |     module = importlib.import_module(module_str)                                                                                                           
+anime_backend        |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                           
+anime_backend        |   File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module                                                                       
+anime_backend        |     return _bootstrap._gcd_import(name[level:], package, level)                                                                                            
+anime_backend        |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+anime_backend        |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import                                                                                          
+anime_backend        |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load                                                                                       
+anime_backend        |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked                                                                              
+anime_backend        |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked                                                                                        
+anime_backend        |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module                                                                                  
+anime_backend        |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed                                                                             
+anime_backend        |   File "/fastapi_app/main.py", line 10, in <module>                                                                                                        
+anime_backend        |     from Database_connection.db_init import insert_new_anime_data                                                                                          
+anime_backend        |   File "/fastapi_app/Database_connection/db_init.py", line 6, in <module>                                                                                  
+anime_backend        |     from dotenv import load_dotenv                                                                                                                         
+anime_backend        | ModuleNotFoundError: No module named 'dotenv'
+
+monitoring_services  | Your Existing experiment MLOPS_RECOMMENDATION_SYSTEM with ID: 241201366788837708
+monitoring_services  | No recent runs found with a logged Artifacts.
+monitoring_services  | [2025-04-07 17:17:00 +0000] [30] [INFO] Starting gunicorn 23.0.0                                                                                           
+monitoring_services  | [2025-04-07 17:17:00 +0000] [30] [INFO] Listening at: http://0.0.0.0:5000 (30)
+monitoring_services  | [2025-04-07 17:17:00 +0000] [30] [INFO] Using worker: sync                                                                                                 
+monitoring_services  | [2025-04-07 17:17:00 +0000] [31] [INFO] Booting worker with pid: 31                                                                                        
+monitoring_services  | [2025-04-07 17:17:01 +0000] [32] [INFO] Booting worker with pid: 32
+monitoring_services  | [2025-04-07 17:17:01 +0000] [33] [INFO] Booting worker with pid: 33
+monitoring_services  | [2025-04-07 17:17:01 +0000] [34] [INFO] Booting worker with pid: 34
+airflow_webserver    | 
+airflow_scheduler    | 
+airflow_webserver    | [2025-04-07T17:17:05.608+0000] {configuration.py:2049} INFO - Creating new FAB webserver config file in: /opt/airflow/webserver_config.py                  
+monitoring_services  | [nltk_data] Downloading package stopwords to /root/nltk_data...
+monitoring_services  | [nltk_data]   Package stopwords is already up-to-date!
+monitoring_services  | [nltk_data] Downloading package punkt to /root/nltk_data...
+monitoring_services  | [nltk_data]   Package punkt is already up-to-date!                                                                                                         
+monitoring_services  | 2025-04-07 17:23:25,098 - INFO - **Step 1**: Doing the Data Reading for further work.
+monitoring_services  | 2025-04-07 17:23:27,566 - INFO - **Step 2**: Preprocessing work for the Data starts from Here..
+monitoring_services  | 2025-04-07 17:23:27,567 - INFO - ....Selecting faeture for the basic Remommendation Model building....
+monitoring_services  | 2025-04-07 17:23:38,866 - INFO - The Data has been cleaned and saved to a loctaion DVC_FOLDER/preprocessed/Preprocessed_anime.csv                          
+monitoring_services  | Shape of the data (6790, 29)
+airflow_webserver    | /home/airflow/.local/lib/python3.11/site-packages/flask_limiter/extension.py:336 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+airflow_webserver    | [2025-04-07T17:23:45.348+0000] {manager.py:239} INFO - Inserted Role: %s
+airflow_webserver    | [2025-04-07T17:23:46.031+0000] {manager.py:239} INFO - Inserted Role: %s
+airflow_webserver    | [2025-04-07T17:23:46.036+0000] {manager.py:670} WARNING - No user yet created, use flask fab command to do it.
+airflow_webserver    | [2025-04-07T17:23:50.876+0000] {manager.py:499} INFO - Created Permission View: %s
+airflow_webserver    | [2025-04-07T17:23:51.602+0000] {manager.py:555} INFO - Added Permission %s to role %s
+airflow_webserver    | [2025-04-07T17:23:53.039+0000] {manager.py:499} INFO - Created Permission View: %s
+airflow_scheduler    |   ____________       _____________
+airflow_scheduler    |  ____    |__( )_________  __/__  /________      __
+airflow_scheduler    | ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /                                                                                                         
+airflow_scheduler    | ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /                                                                                                          
+airflow_scheduler    |  _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/                                                                                                           
+airflow_scheduler    | [2025-04-07T17:23:53.654+0000] {executor_loader.py:117} INFO - Loaded executor: SequentialExecutor                                                         
+airflow_webserver    | [2025-04-07T17:23:53.752+0000] {manager.py:555} INFO - Added Permission %s to role %s                                                                      
+airflow_scheduler    | [2025-04-07 17:23:54 +0000] [17] [INFO] Starting gunicorn 21.2.0
+airflow_scheduler    | [2025-04-07 17:23:54 +0000] [17] [INFO] Listening at: http://[::]:8793 (17)
+airflow_scheduler    | [2025-04-07 17:23:54 +0000] [17] [INFO] Using worker: sync
+airflow_scheduler    | [2025-04-07 17:23:54 +0000] [18] [INFO] Booting worker with pid: 18                                                                                        
+airflow_scheduler    | [2025-04-07 17:23:54 +0000] [19] [INFO] Booting worker with pid: 19
+airflow_webserver    | [2025-04-07T17:23:55.861+0000] {manager.py:499} INFO - Created Permission View: %s
+monitoring_services  | 2025-04-07 17:23:55,869 - INFO - **Step 3: Making a TFIDF Vectorizer for the corpus of the Words we have for the Recommendation System...
+monitoring_services  | 2025-04-07 17:23:55,870 - INFO - Reintailizing the Preprocessed Data for the work
+airflow_scheduler    | [2025-04-07T17:23:55.907+0000] {scheduler_job_runner.py:797} INFO - Starting the scheduler                                                                 
+airflow_scheduler    | [2025-04-07T17:23:55.908+0000] {scheduler_job_runner.py:804} INFO - Processing each file at most -1 times
+airflow_scheduler    | [2025-04-07T17:23:55.916+0000] {manager.py:166} INFO - Launched DagFileProcessorManager with pid: 20                                                       
+airflow_scheduler    | [2025-04-07T17:23:55.921+0000] {scheduler_job_runner.py:1605} INFO - Adopting or resetting orphaned tasks for active dag runs                              
+airflow_scheduler    | [2025-04-07T17:23:55.925+0000] {settings.py:61} INFO - Configured default timezone Timezone('UTC')
+monitoring_services  | 2025-04-07 17:23:56,007 - INFO - ....Making the Text into the Vectors for making the closest Recommendation...
+airflow_webserver    | [2025-04-07T17:23:56.833+0000] {manager.py:555} INFO - Added Permission %s to role %s
+airflow_webserver    | [2025-04-07T17:23:57.661+0000] {manager.py:499} INFO - Created Permission View: %s
+airflow_webserver    | [2025-04-07T17:23:58.229+0000] {manager.py:555} INFO - Added Permission %s to role %s
+airflow_scheduler    | [2025-04-07T17:23:59.023+0000] {manager.py:410} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+airflow_webserver    | [2025-04-07T17:24:05.202+0000] {manager.py:499} INFO - Created Permission View: %s
+airflow_webserver    | [2025-04-07T17:24:07.152+0000] {manager.py:555} INFO - Added Permission %s to role %s
+airflow_webserver    | [2025-04-07T17:24:08.009+0000] {manager.py:499} INFO - Created Permission View: %s
+airflow_webserver    | [2025-04-07T17:24:09.094+0000] {manager.py:555} INFO - Added Permission %s to role %s
+airflow_webserver    |   ____________       _____________
+airflow_webserver    |  ____    |__( )_________  __/__  /________      __
+airflow_webserver    | ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /                                                                                                         
+airflow_webserver    | ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /                                                                                                          
+airflow_webserver    |  _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/                                                                                                           
+airflow_webserver    | Running the Gunicorn Server with:                                                                                                                          
+airflow_webserver    | Workers: 4 sync                                                                                                                                            
+airflow_webserver    | Host: 0.0.0.0:8080                                                                                                                                         
+airflow_webserver    | Timeout: 120                                                                                                                                               
+airflow_webserver    | Logfiles: - -
+airflow_webserver    | Access Logformat:                                                                                                                                          
+airflow_webserver    | =================================================================                                                                                          
+airflow_webserver    | [2025-04-07T17:25:28.600+0000] {webserver_command.py:225} ERROR - No response from gunicorn master within 120 seconds                                      
+airflow_webserver    | [2025-04-07T17:25:28.600+0000] {webserver_command.py:226} ERROR - Shutting down webserver                                                                  
+airflow_scheduler    | [2025-04-07T17:28:59.603+0000] {scheduler_job_runner.py:1605} INFO - Adopting or resetting orphaned tasks for active dag runs                              
+airflow_scheduler    | [2025-04-07T17:34:43.123+0000] {scheduler_job_runner.py:1605} INFO - Adopting or resetting orphaned tasks for active dag runs
+airflow_scheduler    | [2025-04-07T17:34:43.125+0000] {scheduler_job_runner.py:1628} INFO - Marked 1 SchedulerJob instances as failed
+airflow_webserver exited with code 0
+airflow_scheduler    | [2025-04-07T17:40:18.315+0000] {scheduler_job_runner.py:1605} INFO - Adopting or resetting orphaned tasks for active dag runs
+airflow_scheduler    | [2025-04-07T17:40:18.318+0000] {scheduler_job_runner.py:1628} INFO - Marked 1 SchedulerJob instances as failed
+mlflow_trackings     | [2025-04-07 17:42:18 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:17)                                                                                        
+monitoring_services  | [2025-04-07 17:42:48 +0000] [30] [CRITICAL] WORKER TIMEOUT (pid:34)
+mlflow_trackings     | [2025-04-07 17:43:01 +0000] [17] [INFO] Worker exiting (pid: 17)
+monitoring_services  | [2025-04-07 17:43:03 +0000] [34] [INFO] Worker exiting (pid: 34)
+mlflow_trackings     | [2025-04-07 17:43:19 +0000] [15] [ERROR] Worker (pid:17) was sent SIGKILL! Perhaps out of memory?
+monitoring_services  | [2025-04-07 17:43:19 +0000] [30] [ERROR] Worker (pid:34) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:43:25 +0000] [52] [INFO] Booting worker with pid: 52
+airflow_scheduler    | [2025-04-07 17:42:15 +0000] [17] [CRITICAL] WORKER TIMEOUT (pid:18)
+airflow_scheduler    | [2025-04-07 17:43:25 +0000] [18] [INFO] Worker exiting (pid: 18)
+airflow_scheduler    | [2025-04-07 17:43:28 +0000] [17] [ERROR] Worker (pid:18) exited with code 1
+airflow_scheduler    | [2025-04-07 17:43:28 +0000] [17] [ERROR] Worker (pid:18) exited with code 1.
+monitoring_services  | [2025-04-07 17:43:28 +0000] [79] [INFO] Booting worker with pid: 79                                                                                        
+airflow_scheduler    | [2025-04-07 17:43:37 +0000] [33] [INFO] Booting worker with pid: 33
+mlflow_trackings     | [2025-04-07 17:43:53 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:52)
+mlflow_trackings     | [2025-04-07 17:43:54 +0000] [52] [INFO] Worker exiting (pid: 52)
+mlflow_trackings     | [2025-04-07 17:43:55 +0000] [15] [ERROR] Worker (pid:52) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:43:57 +0000] [53] [INFO] Booting worker with pid: 53
+mlflow_trackings     | [2025-04-07 17:44:26 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:53)
+mlflow_trackings     | [2025-04-07 17:44:26 +0000] [53] [INFO] Worker exiting (pid: 53)
+mlflow_trackings     | [2025-04-07 17:44:27 +0000] [15] [ERROR] Worker (pid:53) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:44:27 +0000] [54] [INFO] Booting worker with pid: 54
+monitoring_services  | 2025-04-07 17:44:31,989 - INFO - **Step 4: Now making the Cosine Simarity method to find the Recommended ones...                                           
+mlflow_trackings     | [2025-04-07 17:44:58 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:54)
+mlflow_trackings     | [2025-04-07 17:44:59 +0000] [15] [ERROR] Worker (pid:54) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:44:59 +0000] [55] [INFO] Booting worker with pid: 55
+airflow_scheduler    | [2025-04-07T17:45:20.226+0000] {scheduler_job_runner.py:1605} INFO - Adopting or resetting orphaned tasks for active dag runs                              
+mlflow_trackings     | [2025-04-07 17:45:29 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:55)
+mlflow_trackings     | [2025-04-07 17:45:29 +0000] [55] [INFO] Worker exiting (pid: 55)
+mlflow_trackings     | [2025-04-07 17:45:30 +0000] [15] [ERROR] Worker (pid:55) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:45:30 +0000] [56] [INFO] Booting worker with pid: 56
+mlflow_trackings     | [2025-04-07 17:46:00 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:56)                                                                                        
+mlflow_trackings     | [2025-04-07 17:46:01 +0000] [56] [INFO] Worker exiting (pid: 56)
+mlflow_trackings     | [2025-04-07 17:46:02 +0000] [15] [ERROR] Worker (pid:56) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:46:03 +0000] [57] [INFO] Booting worker with pid: 57
+mlflow_trackings     | [2025-04-07 17:46:32 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:57)
+mlflow_trackings     | [2025-04-07 17:46:33 +0000] [15] [ERROR] Worker (pid:57) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:46:33 +0000] [58] [INFO] Booting worker with pid: 58
+mlflow_trackings     | [2025-04-07 17:47:04 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:58)
+mlflow_trackings     | [2025-04-07 17:47:05 +0000] [15] [ERROR] Worker (pid:58) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:47:07 +0000] [59] [INFO] Booting worker with pid: 59
+mlflow_trackings     | [2025-04-07 17:47:37 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:59)
+mlflow_trackings     | [2025-04-07 17:47:38 +0000] [59] [INFO] Worker exiting (pid: 59)
+mlflow_trackings     | [2025-04-07 17:47:39 +0000] [15] [ERROR] Worker (pid:59) was sent SIGKILL! Perhaps out of memory?                                                          
+mlflow_trackings     | [2025-04-07 17:47:39 +0000] [60] [INFO] Booting worker with pid: 60                                                                                        
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution
+mysql_db             | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+airflow_scheduler    | [2025-04-07 17:47:42 +0000] [17] [CRITICAL] WORKER TIMEOUT (pid:19)
+airflow_scheduler    | [2025-04-07 17:47:57 +0000] [19] [INFO] Worker exiting (pid: 19)
+airflow_scheduler    | [2025-04-07 17:48:00 +0000] [17] [ERROR] Worker (pid:19) exited with code 1
+airflow_scheduler    | [2025-04-07 17:48:00 +0000] [17] [ERROR] Worker (pid:19) exited with code 1.
+mlflow_trackings     | [2025-04-07 17:48:09 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:60)                                                                                        
+airflow_scheduler    | [2025-04-07 17:48:09 +0000] [38] [INFO] Booting worker with pid: 38
+mlflow_trackings     | [2025-04-07 17:48:09 +0000] [60] [INFO] Worker exiting (pid: 60)
+mlflow_trackings     | [2025-04-07 17:48:10 +0000] [15] [ERROR] Worker (pid:60) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:48:10 +0000] [61] [INFO] Booting worker with pid: 61
+airflow_scheduler    | [2025-04-07 17:48:34 +0000] [17] [CRITICAL] WORKER TIMEOUT (pid:38)
+airflow_scheduler    | [2025-04-07 17:48:38 +0000] [17] [ERROR] Worker (pid:38) was sent SIGKILL! Perhaps out of memory?
+airflow_scheduler    | [2025-04-07 17:48:39 +0000] [39] [INFO] Booting worker with pid: 39
+mlflow_trackings     | [2025-04-07 17:48:41 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:61)
+mlflow_trackings     | [2025-04-07 17:48:42 +0000] [15] [ERROR] Worker (pid:61) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:48:43 +0000] [62] [INFO] Booting worker with pid: 62
+mlflow_trackings     | [2025-04-07 17:49:13 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:62)
+mlflow_trackings     | [2025-04-07 17:49:14 +0000] [62] [INFO] Worker exiting (pid: 62)
+mlflow_trackings     | [2025-04-07 17:49:15 +0000] [15] [ERROR] Worker (pid:62) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:49:15 +0000] [63] [INFO] Booting worker with pid: 63
+mlflow_trackings     | [2025-04-07 17:49:45 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:63)
+mlflow_trackings     | [2025-04-07 17:49:53 +0000] [15] [ERROR] Worker (pid:63) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:49:53 +0000] [64] [INFO] Booting worker with pid: 64                                                                                        
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+mysql_db             | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+mysql_db             | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+mysql_db             | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution
+mysql_db             | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+mysql_db             | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+mysql_db             | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+mysql_db             | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+mlflow_trackings     | [2025-04-07 17:50:23 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:64)                                                                                        
+mlflow_trackings     | [2025-04-07 17:50:24 +0000] [15] [ERROR] Worker (pid:64) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:50:24 +0000] [65] [INFO] Booting worker with pid: 65                                                                                        
+mlflow_trackings     | [2025-04-07 17:50:54 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:65)                                                                                        
+mlflow_trackings     | [2025-04-07 17:50:55 +0000] [15] [ERROR] Worker (pid:65) was sent SIGKILL! Perhaps out of memory?                                                          
+mlflow_trackings     | [2025-04-07 17:50:55 +0000] [66] [INFO] Booting worker with pid: 66                                                                                        
+mlflow_trackings     | [2025-04-07 17:51:26 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:66)                                                                                        
+mlflow_trackings     | [2025-04-07 17:51:27 +0000] [15] [ERROR] Worker (pid:66) was sent SIGKILL! Perhaps out of memory?
+mlflow_trackings     | [2025-04-07 17:51:27 +0000] [67] [INFO] Booting worker with pid: 67                                                                                        
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+mysql_db             | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution                                                                        
+mysql_db             | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution
+mlflow_trackings     | [2025-04-07 17:51:58 +0000] [15] [CRITICAL] WORKER TIMEOUT (pid:67)                                                                                        
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution
+anime_db_service     | nc: getaddrinfo for host "mysql_db" port 3306: Temporary failure in name resolution
+
+
+ INFO  [alembic.runtime.migration] Context impl SQLiteImpl.                                                                               
+airflow                    | INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+airflow                    | ERROR [airflow.models.dagbag.DagBag] Failed to import: /opt/airflow/dags/etl_pipeline.py                                                 
+airflow                    | Traceback (most recent call last):
+airflow                    |   File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 343, in parse                                  
+airflow                    |     loader.exec_module(new_module)                                                                                                       
+airflow                    |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module                                                                
+airflow                    |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed                                                           
+airflow                    |   File "/opt/airflow/dags/etl_pipeline.py", line 39, in <module>                                                                         
+airflow                    |     extract >> transform >> load >> retrain                                                                                              
+airflow                    |     ~~~~~~~~~~~~~~~~~~~~~^^~~~~~                                                                                                         
+airflow                    |   File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskmixin.py", line 103, in __rshift__                          
+airflow                    |     self.set_downstream(other)                                                                                                           
+airflow                    |   File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/xcom_arg.py", line 155, in set_downstream                       
+airflow                    |     operator.set_downstream(task_or_task_list, edge_modifier)                                                                            
+airflow                    |   File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskmixin.py", line 261, in set_downstream                      
+airflow                    |     self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)                                                  
+airflow                    |   File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskmixin.py", line 213, in _set_relatives                      
+airflow                    |     task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)                                                         
+airflow                    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^                                                                                                          
+airflow                    | AttributeError: 'NoneType' object has no attribute 'update_relative'                                                                     
+airflow                    | ⚠️ No data available to load.                                                                                                             
+airflow                    | Initialization done
+airflow                    | ✅ Airflow Database Initialized.                                                                                                         
+airflow                    | 🛡️ Checking if Airflow Admin User exists...
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/airflow/configuration.py:857 FutureWarning: The 'log_filename_template' setting in [logging] has the old default value of '"{{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log"'. This value has been changed to '"dag_id={{ ti.dag_id }}/run_id={{ ti.run_id }}/task_id={{ ti.task_id }}/{% if ti.map_index >= 0 %}map_index={{ ti.map_index }}/{% endif %}attempt={{ try_number }}.log"' in the running config, but please update your config before Apache Airflow 3.0.
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/airflow/configuration.py:723 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.                                                                          
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/airflow/configuration.py:765 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.                                                                          
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/airflow/configuration.py:779 FutureWarning: The auth_backends setting in [api] has had airflow.api.auth.backend.session added in the running config, which is needed by the UI. Please update your config before Apache Airflow 3.0.                         
+airflow                    | ✅ Admin user already exists.
+airflow                    | ⏳ Waiting 5 seconds before starting Airflow Services...
+airflow                    | 🚀 Starting Airflow Services...                                                                                                          
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/airflow/configuration.py:857 FutureWarning: The 'log_filename_template' setting in [logging] has the old default value of '"{{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log"'. This value has been changed to '"dag_id={{ ti.dag_id }}/run_id={{ ti.run_id }}/task_id={{ ti.task_id }}/{% if ti.map_index >= 0 %}map_index={{ ti.map_index }}/{% endif %}attempt={{ try_number }}.log"' in the running config, but please update your config before Apache Airflow 3.0.
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/airflow/configuration.py:723 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/airflow/configuration.py:765 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.                                                                          
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/airflow/configuration.py:779 FutureWarning: The auth_backends setting in [api] has had airflow.api.auth.backend.session added in the running config, which is needed by the UI. Please update your config before Apache Airflow 3.0.                         
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/airflow/configuration.py:857 FutureWarning: The 'log_filename_template' setting in [logging] has the old default value of '"{{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log"'. This value has been changed to '"dag_id={{ ti.dag_id }}/run_id={{ ti.run_id }}/task_id={{ ti.task_id }}/{% if ti.map_index >= 0 %}map_index={{ ti.map_index }}/{% endif %}attempt={{ try_number }}.log"' in the running config, but please update your config before Apache Airflow 3.0.
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/airflow/configuration.py:723 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/airflow/configuration.py:765 DeprecationWarning: The auth_backend option in [api] has been renamed to auth_backends - the old setting has been used, but please update your config.                                                                          
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/airflow/configuration.py:779 FutureWarning: The auth_backends setting in [api] has had airflow.api.auth.backend.session added in the running config, which is needed by the UI. Please update your config before Apache Airflow 3.0.                         
+airflow                    |   ____________       _____________
+airflow                    |  ____    |__( )_________  __/__  /________      __
+airflow                    | ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /                                                                                       
+airflow                    | ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /                                                                                        
+airflow                    |  _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/                                                                                         
+airflow                    | [2025-05-01T19:30:43.029+0000] {executor_loader.py:117} INFO - Loaded executor: SequentialExecutor                                       
+airflow                    | [2025-05-01 19:30:43 +0000] [44] [INFO] Starting gunicorn 21.2.0                                                                         
+airflow                    | [2025-05-01 19:30:43 +0000] [44] [INFO] Listening at: http://[::]:8793 (44)
+airflow                    | [2025-05-01 19:30:43 +0000] [44] [INFO] Using worker: sync
+airflow                    | [2025-05-01 19:30:43 +0000] [45] [INFO] Booting worker with pid: 45                                                                      
+airflow                    | [2025-05-01 19:30:43 +0000] [46] [INFO] Booting worker with pid: 46                                                                      
+airflow                    | [2025-05-01T19:30:43.392+0000] {scheduler_job_runner.py:800} INFO - Starting the scheduler
+airflow                    | [2025-05-01T19:30:43.393+0000] {scheduler_job_runner.py:807} INFO - Processing each file at most -1 times
+airflow                    | [2025-05-01T19:30:43.400+0000] {manager.py:166} INFO - Launched DagFileProcessorManager with pid: 47                                     
+airflow                    | [2025-05-01T19:30:43.403+0000] {scheduler_job_runner.py:1588} INFO - Resetting orphaned tasks for active dag runs
+airflow                    | [2025-05-01T19:30:43.413+0000] {settings.py:60} INFO - Configured default timezone Timezone('UTC')                                       
+airflow                    | [2025-05-01T19:30:43.464+0000] {scheduler_job_runner.py:1611} INFO - Marked 1 SchedulerJob instances as failed                           
+airflow                    | [2025-05-01T19:30:43.480+0000] {manager.py:411} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.                                                                                                                                      
+airflow                    | /home/airflow/.local/lib/python3.11/site-packages/flask_limiter/extension.py:293 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+
+Broken DAG: [/opt/airflow/dags/etl_pipeline.py] Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskmixin.py", line 261, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskmixin.py", line 213, in _set_relatives
+    task_object.update_relative(self, not upstream, edge_modifier=edge_modifier)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'update_relative'
+
+
+airflow                    | 172.18.0.1 - - [01/May/2025:19:37:46 +0000] "GET /static/dist/dags.2b0a1beb9a415f5c433c.js HTTP/1.1" 200 0 "http://localhost:8080/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 OPR/118.0.0.0"
+airflow                    | 172.18.0.1 - - [01/May/2025:19:38:05 +0000] "GET /static/pin_32.png HTTP/1.1" 200 0 "http://localhost:8080/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 OPR/118.0.0.0"
+airflow                    | [2025-05-01T19:40:50.579+0000] {scheduler_job_runner.py:1588} INFO - Resetting orphaned tasks for active dag runs
+anime_backend              | INFO:     172.18.0.6:50274 - "GET /get_anime_list HTTP/1.1" 200 OK
+airflow                    | [2025-05-01T19:45:51.485+0000] {scheduler_job_runner.py:1588} INFO - Resetting orphaned tasks for active dag runs
+anime_backend              | INFO:     172.18.0.6:55920 - "POST /add_anime/ HTTP/1.1" 200 OK
+
+Anime Added but Airflow Trigger Failed

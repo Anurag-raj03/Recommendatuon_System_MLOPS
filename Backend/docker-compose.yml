@@ -1,0 +1,22 @@
+services:
+  backend:
+   build:
+    context: ./Backend
+    dockerfile: Dockerfile.backend
+   image: anuragraj03/mlops_recommendation/backend_process:latest
+   container_name: anime_backend
+   ports:
+     - "8000:8000"
+   volumes:
+     - .:/backend_app
+     - ./Database_connection:/app/Database_connection/
+   environment:
+     - DATABASE_PATH=/backend_app/Database_connection/anime_dat.db
+     - DATABASE_PATH2=/backend_app/Database_connection/anime_preprocessed_dat.db 
+   networks:
+      - anime_network
+
+networks:
+  anime_network:
+    driver: bridge    
+

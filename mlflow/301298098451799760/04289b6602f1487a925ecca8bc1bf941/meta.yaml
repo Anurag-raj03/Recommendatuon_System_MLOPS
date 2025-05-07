@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/04289b6602f1487a925ecca8bc1bf941/artifacts
+deleted_time: null
+end_time: null
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: 04289b6602f1487a925ecca8bc1bf941
+run_name: respected-boar-627
+run_uuid: 04289b6602f1487a925ecca8bc1bf941
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745660178785
+status: 1
+tags: []
+user_id: root

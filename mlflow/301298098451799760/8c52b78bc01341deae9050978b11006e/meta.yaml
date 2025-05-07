@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/8c52b78bc01341deae9050978b11006e/artifacts
+end_time: 1744546636187
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: 8c52b78bc01341deae9050978b11006e
+run_name: marvelous-chimp-546
+run_uuid: 8c52b78bc01341deae9050978b11006e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744546615894
+status: 3
+tags: []
+user_id: root

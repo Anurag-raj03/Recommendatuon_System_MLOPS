@@ -1,0 +1,22 @@
+[2025-05-07T12:55:12.142+0000] {logging_mixin.py:151} INFO - Changing /opt/airflow/logs/"dag_id=anime_etl_pipeline/run_id=manual__2025-05-07T12:54:45.110872+00:00/task_id=aft_to_csv permission to 509
+[2025-05-07T12:55:12.146+0000] {logging_mixin.py:151} INFO - Failed to change /opt/airflow/logs/"dag_id=anime_etl_pipeline/run_id=manual__2025-05-07T12:54:45.110872+00:00/task_id=aft_to_csv permission to 509: [Errno 1] Operation not permitted: '/opt/airflow/logs/"dag_id=anime_etl_pipeline/run_id=manual__2025-05-07T12:54:45.110872+00:00/task_id=aft_to_csv'
+[2025-05-07T12:55:12.238+0000] {logging_mixin.py:151} INFO - Changing /opt/airflow/logs/"dag_id=anime_etl_pipeline/run_id=manual__2025-05-07T12:54:45.110872+00:00/task_id=aft_to_csv permission to 509
+[2025-05-07T12:55:12.240+0000] {logging_mixin.py:151} INFO - Failed to change /opt/airflow/logs/"dag_id=anime_etl_pipeline/run_id=manual__2025-05-07T12:54:45.110872+00:00/task_id=aft_to_csv permission to 509: [Errno 1] Operation not permitted: '/opt/airflow/logs/"dag_id=anime_etl_pipeline/run_id=manual__2025-05-07T12:54:45.110872+00:00/task_id=aft_to_csv'
+[2025-05-07T12:55:12.317+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: anime_etl_pipeline.aft_to_csv manual__2025-05-07T12:54:45.110872+00:00 [queued]>
+[2025-05-07T12:55:12.346+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: anime_etl_pipeline.aft_to_csv manual__2025-05-07T12:54:45.110872+00:00 [queued]>
+[2025-05-07T12:55:12.347+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-05-07T12:55:12.393+0000] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): aft_to_csv> on 2025-05-07 12:54:45.110872+00:00
+[2025-05-07T12:55:12.401+0000] {standard_task_runner.py:57} INFO - Started process 330 to run task
+[2025-05-07T12:55:12.408+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'anime_etl_pipeline', 'aft_to_csv', 'manual__2025-05-07T12:54:45.110872+00:00', '--job-id', '206', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmp1djz9qgq']
+[2025-05-07T12:55:12.409+0000] {standard_task_runner.py:85} INFO - Job 206: Subtask aft_to_csv
+[2025-05-07T12:55:12.548+0000] {logging_mixin.py:151} INFO - Changing /opt/airflow/logs/"dag_id=anime_etl_pipeline/run_id=manual__2025-05-07T12:54:45.110872+00:00/task_id=aft_to_csv permission to 509
+[2025-05-07T12:55:12.549+0000] {logging_mixin.py:151} INFO - Failed to change /opt/airflow/logs/"dag_id=anime_etl_pipeline/run_id=manual__2025-05-07T12:54:45.110872+00:00/task_id=aft_to_csv permission to 509: [Errno 1] Operation not permitted: '/opt/airflow/logs/"dag_id=anime_etl_pipeline/run_id=manual__2025-05-07T12:54:45.110872+00:00/task_id=aft_to_csv'
+[2025-05-07T12:55:12.552+0000] {task_command.py:415} INFO - Running <TaskInstance: anime_etl_pipeline.aft_to_csv manual__2025-05-07T12:54:45.110872+00:00 [running]> on host b21373046c31
+[2025-05-07T12:55:13.536+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='anime_etl_pipeline' AIRFLOW_CTX_TASK_ID='aft_to_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-05-07T12:54:45.110872+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-07T12:54:45.110872+00:00'
+[2025-05-07T12:55:14.365+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:55:14.396+0000] {logging_mixin.py:151} INFO - Data saved to Data_Versioning/preprocessed/etl_transform.csv
+[2025-05-07T12:55:14.422+0000] {logging_mixin.py:151} INFO - Table cleaned after extraction.
+[2025-05-07T12:55:14.425+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-05-07T12:55:14.447+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=anime_etl_pipeline, task_id=aft_to_csv, execution_date=20250507T125445, start_date=20250507T125512, end_date=20250507T125514
+[2025-05-07T12:55:14.552+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-05-07T12:55:14.612+0000] {taskinstance.py:2784} INFO - 1 downstream tasks scheduled from follow-on schedule check

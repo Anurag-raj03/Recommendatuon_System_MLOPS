@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/c6bfc1d7a00e4ae4900c376b7d269b4a/artifacts
+end_time: 1745668640639
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: c6bfc1d7a00e4ae4900c376b7d269b4a
+run_name: traveling-whale-101
+run_uuid: c6bfc1d7a00e4ae4900c376b7d269b4a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745668624786
+status: 3
+tags: []
+user_id: root

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/3b24d71dbdda4a08a92ffef16a914df8/artifacts
+end_time: 1744545934268
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: 3b24d71dbdda4a08a92ffef16a914df8
+run_name: silent-shrike-56
+run_uuid: 3b24d71dbdda4a08a92ffef16a914df8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744545920917
+status: 3
+tags: []
+user_id: root

@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pandas
+joblib
+requests
+beautifulsoup4
+python-dotenv
+pydantic
+python-multipart
+scikit-learn==1.4.0

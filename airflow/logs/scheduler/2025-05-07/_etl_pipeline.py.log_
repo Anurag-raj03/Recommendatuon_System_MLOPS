@@ -1,0 +1,429 @@
+[2025-05-07T12:49:25.065+0000] {processor.py:157} INFO - Started process (PID=73) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:49:25.067+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:49:25.069+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:49:25.068+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:49:25.156+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:49:25.170+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:49:25.184+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:49:25.196+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:49:25.216+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:49:25.245+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:49:25.244+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:49:25.303+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:49:25.303+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T11:00:00+00:00, run_after=2025-05-07T12:00:00+00:00
+[2025-05-07T12:49:25.459+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.399 seconds
+[2025-05-07T12:49:56.401+0000] {processor.py:157} INFO - Started process (PID=88) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:49:56.403+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:49:56.405+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:49:56.404+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:49:56.481+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:49:56.494+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:49:56.506+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:49:56.518+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:49:56.535+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:49:56.593+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:49:56.593+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:49:56.644+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:49:56.644+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T11:00:00+00:00, run_after=2025-05-07T12:00:00+00:00
+[2025-05-07T12:49:56.753+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.357 seconds
+[2025-05-07T12:50:36.533+0000] {processor.py:157} INFO - Started process (PID=119) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:50:36.535+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:50:36.537+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:50:36.536+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:50:36.615+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:50:36.628+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:50:36.639+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:50:36.649+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:50:36.666+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:50:36.722+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:50:36.722+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:50:36.786+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:50:36.786+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:50:36.885+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.357 seconds
+[2025-05-07T12:51:53.150+0000] {processor.py:157} INFO - Started process (PID=272) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:51:53.152+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:51:53.154+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:51:53.153+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:51:53.242+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:51:53.257+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:51:53.272+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:51:53.285+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:51:53.303+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:51:53.363+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:51:53.363+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:51:53.418+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:51:53.418+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:51:53.602+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.457 seconds
+[2025-05-07T12:52:24.347+0000] {processor.py:157} INFO - Started process (PID=273) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:52:24.349+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:52:24.350+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:52:24.350+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:52:24.432+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:52:24.445+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:52:24.458+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:52:24.470+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:52:24.488+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:52:24.545+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:52:24.545+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:52:24.602+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:52:24.602+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:52:24.749+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.407 seconds
+[2025-05-07T12:52:55.961+0000] {processor.py:157} INFO - Started process (PID=274) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:52:55.963+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:52:55.966+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:52:55.965+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:52:56.065+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:52:56.075+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:52:56.084+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:52:56.094+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:52:56.112+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:52:56.173+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:52:56.172+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:52:56.225+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:52:56.225+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:52:56.355+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.401 seconds
+[2025-05-07T12:53:26.601+0000] {processor.py:157} INFO - Started process (PID=275) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:53:26.602+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:53:26.604+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:53:26.604+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:53:26.678+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:53:26.688+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:53:26.696+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:53:26.704+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:53:26.719+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:53:26.777+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:53:26.776+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:53:26.865+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:53:26.865+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:53:26.980+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.383 seconds
+[2025-05-07T12:53:57.205+0000] {processor.py:157} INFO - Started process (PID=276) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:53:57.208+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:53:57.210+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:53:57.209+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:53:57.285+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:53:57.303+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:53:57.317+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:53:57.331+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:53:57.348+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:53:57.411+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:53:57.410+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:53:57.467+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:53:57.466+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:53:57.585+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.385 seconds
+[2025-05-07T12:54:28.547+0000] {processor.py:157} INFO - Started process (PID=277) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:54:28.549+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:54:28.550+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:54:28.550+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:54:28.623+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:54:28.633+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:54:28.642+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:54:28.651+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:54:28.672+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:54:28.732+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:54:28.732+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:54:28.803+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:54:28.803+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:54:28.913+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.371 seconds
+[2025-05-07T12:55:07.073+0000] {processor.py:157} INFO - Started process (PID=317) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:55:07.074+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:55:07.077+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:55:07.076+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:55:07.151+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:55:07.161+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:55:07.171+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:55:07.180+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:55:07.202+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:55:07.265+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:55:07.264+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:55:07.325+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:55:07.325+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:55:07.433+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.365 seconds
+[2025-05-07T12:55:43.592+0000] {processor.py:157} INFO - Started process (PID=369) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:55:43.595+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:55:43.597+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:55:43.596+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:55:43.705+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:55:43.715+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:55:43.726+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:55:43.737+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:55:43.760+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:55:43.871+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:55:43.871+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:55:43.948+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:55:43.947+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:55:44.088+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.503 seconds
+[2025-05-07T12:56:15.134+0000] {processor.py:157} INFO - Started process (PID=370) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:56:15.136+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:56:15.138+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:56:15.137+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:56:15.222+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:56:15.233+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:56:15.242+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:56:15.253+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:56:15.273+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:56:15.357+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:56:15.356+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:56:15.438+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:56:15.437+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:56:15.556+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.427 seconds
+[2025-05-07T12:56:46.469+0000] {processor.py:157} INFO - Started process (PID=371) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:56:46.472+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:56:46.474+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:56:46.473+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:56:46.550+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:56:46.560+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:56:46.569+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:56:46.579+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:56:46.598+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:56:46.652+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:56:46.651+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:56:46.707+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:56:46.706+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:56:46.850+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.388 seconds
+[2025-05-07T12:57:17.438+0000] {processor.py:157} INFO - Started process (PID=372) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:57:17.440+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:57:17.442+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:57:17.442+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:57:17.528+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:57:17.540+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:57:17.549+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:57:17.559+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:57:17.589+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:57:17.655+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:57:17.654+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:57:17.713+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:57:17.713+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:57:17.822+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.391 seconds
+[2025-05-07T12:57:48.749+0000] {processor.py:157} INFO - Started process (PID=373) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:57:48.751+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:57:48.753+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:57:48.752+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:57:48.840+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:57:48.855+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:57:48.874+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:57:48.887+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:57:48.904+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:57:48.972+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:57:48.972+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:57:49.024+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:57:49.024+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:57:49.147+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.403 seconds
+[2025-05-07T12:58:19.698+0000] {processor.py:157} INFO - Started process (PID=374) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:58:19.700+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:58:19.702+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:58:19.701+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:58:19.774+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:58:19.784+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:58:19.794+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:58:19.805+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:58:19.831+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:58:19.903+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:58:19.903+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:58:19.979+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:58:19.979+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:58:20.111+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.417 seconds
+[2025-05-07T12:58:50.543+0000] {processor.py:157} INFO - Started process (PID=375) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:58:50.545+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:58:50.548+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:58:50.547+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:58:50.628+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:58:50.638+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:58:50.647+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:58:50.658+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:58:50.682+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:58:50.747+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:58:50.746+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:58:50.826+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:58:50.825+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:58:50.970+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.433 seconds
+[2025-05-07T12:59:21.404+0000] {processor.py:157} INFO - Started process (PID=376) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:59:21.409+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:59:21.412+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:59:21.411+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:59:21.521+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:59:21.541+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:59:21.554+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:59:21.596+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:59:21.641+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:59:21.748+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:59:21.748+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:59:21.809+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:59:21.808+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:59:21.927+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.531 seconds
+[2025-05-07T12:59:52.221+0000] {processor.py:157} INFO - Started process (PID=377) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:59:52.223+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T12:59:52.225+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:59:52.225+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:59:52.299+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T12:59:52.309+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T12:59:52.323+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T12:59:52.334+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T12:59:52.357+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T12:59:52.423+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:59:52.422+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T12:59:52.479+0000] {logging_mixin.py:151} INFO - [2025-05-07T12:59:52.479+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T12:00:00+00:00, run_after=2025-05-07T13:00:00+00:00
+[2025-05-07T12:59:52.590+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.374 seconds
+[2025-05-07T13:00:25.008+0000] {processor.py:157} INFO - Started process (PID=431) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:00:25.010+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:00:25.013+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:00:25.012+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:00:25.108+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:00:25.117+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:00:25.124+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:00:25.132+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:00:25.154+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:00:25.236+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:00:25.235+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:00:25.311+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:00:25.310+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:00:25.421+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.419 seconds
+[2025-05-07T13:00:56.208+0000] {processor.py:157} INFO - Started process (PID=469) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:00:56.210+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:00:56.213+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:00:56.212+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:00:56.293+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:00:56.308+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:00:56.319+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:00:56.333+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:00:56.376+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:00:56.482+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:00:56.481+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:00:56.588+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:00:56.587+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:00:56.736+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.535 seconds
+[2025-05-07T13:01:27.539+0000] {processor.py:157} INFO - Started process (PID=470) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:01:27.541+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:01:27.543+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:01:27.542+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:01:27.634+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:01:27.654+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:01:27.671+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:01:27.683+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:01:27.706+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:01:27.762+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:01:27.761+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:01:27.814+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:01:27.814+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:01:27.927+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.394 seconds
+[2025-05-07T13:01:59.069+0000] {processor.py:157} INFO - Started process (PID=471) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:01:59.074+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:01:59.080+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:01:59.077+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:01:59.198+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:01:59.213+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:01:59.222+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:01:59.232+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:01:59.271+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:01:59.360+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:01:59.360+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:01:59.422+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:01:59.422+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:01:59.539+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.490 seconds
+[2025-05-07T13:02:30.785+0000] {processor.py:157} INFO - Started process (PID=472) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:02:30.787+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:02:30.790+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:02:30.789+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:02:30.860+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:02:30.870+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:02:30.880+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:02:30.892+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:02:30.915+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:02:30.976+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:02:30.976+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:02:31.034+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:02:31.033+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:02:31.147+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.368 seconds
+[2025-05-07T13:03:02.043+0000] {processor.py:157} INFO - Started process (PID=473) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:03:02.046+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:03:02.049+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:03:02.047+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:03:02.136+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:03:02.155+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:03:02.167+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:03:02.178+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:03:02.208+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:03:02.283+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:03:02.283+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:03:02.361+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:03:02.360+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:03:02.482+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.445 seconds
+[2025-05-07T13:03:33.331+0000] {processor.py:157} INFO - Started process (PID=474) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:03:33.333+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:03:33.335+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:03:33.334+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:03:33.419+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:03:33.429+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:03:33.439+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:03:33.450+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:03:33.481+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:03:33.559+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:03:33.559+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:03:33.634+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:03:33.633+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:03:33.739+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.413 seconds
+[2025-05-07T13:04:04.082+0000] {processor.py:157} INFO - Started process (PID=475) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:04:04.084+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:04:04.086+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:04:04.085+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:04:04.163+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:04:04.175+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:04:04.186+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:04:04.196+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:04:04.214+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:04:04.297+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:04:04.296+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:04:04.364+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:04:04.363+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:04:04.466+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.391 seconds
+[2025-05-07T13:04:34.942+0000] {processor.py:157} INFO - Started process (PID=476) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:04:34.945+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:04:34.947+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:04:34.946+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:04:35.038+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:04:35.049+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:04:35.063+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:04:35.074+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:04:35.095+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:04:35.160+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:04:35.160+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:04:35.219+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:04:35.218+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:04:35.323+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.386 seconds
+[2025-05-07T13:05:05.902+0000] {processor.py:157} INFO - Started process (PID=477) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:05:05.904+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:05:05.906+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:05:05.906+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:05:05.973+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:05:05.983+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:05:05.992+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:05:06.005+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:05:06.023+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:05:06.089+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:05:06.089+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:05:06.145+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:05:06.145+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:05:06.272+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.375 seconds
+[2025-05-07T13:05:36.855+0000] {processor.py:157} INFO - Started process (PID=478) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:05:36.857+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:05:36.859+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:05:36.858+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:05:36.938+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:05:36.950+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:05:36.962+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:05:36.973+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:05:36.993+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:05:37.048+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:05:37.048+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:05:37.104+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:05:37.104+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:05:37.204+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.353 seconds
+[2025-05-07T13:06:07.927+0000] {processor.py:157} INFO - Started process (PID=479) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:06:07.930+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:06:07.933+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:06:07.932+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:06:08.047+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:06:08.057+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:06:08.067+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:06:08.077+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:06:08.099+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:06:08.155+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:06:08.155+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:06:08.207+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:06:08.206+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:06:08.306+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.385 seconds
+[2025-05-07T13:06:39.149+0000] {processor.py:157} INFO - Started process (PID=480) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:06:39.151+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:06:39.153+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:06:39.152+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:06:39.229+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:06:39.238+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:06:39.247+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:06:39.256+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:06:39.275+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:06:39.335+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:06:39.335+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:06:39.391+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:06:39.391+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:06:39.500+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.355 seconds
+[2025-05-07T13:07:09.619+0000] {processor.py:157} INFO - Started process (PID=481) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:07:09.620+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:07:09.622+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:07:09.621+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:07:09.696+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:07:09.706+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:07:09.717+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:07:09.726+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:07:09.746+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:07:09.801+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:07:09.800+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:07:09.864+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:07:09.863+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:07:09.966+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.351 seconds
+[2025-05-07T13:07:40.730+0000] {processor.py:157} INFO - Started process (PID=482) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:07:40.731+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:07:40.734+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:07:40.733+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:07:40.813+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:07:40.826+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:07:40.838+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:07:40.850+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:07:40.873+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:07:40.933+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:07:40.933+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:07:40.994+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:07:40.993+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:07:41.101+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.376 seconds
+[2025-05-07T13:08:11.247+0000] {processor.py:157} INFO - Started process (PID=483) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:08:11.251+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:08:11.257+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:08:11.255+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:08:11.344+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:08:11.360+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:08:11.380+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:08:11.397+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:08:11.428+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:08:11.492+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:08:11.492+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:08:11.538+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:08:11.538+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:08:11.640+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.400 seconds
+[2025-05-07T13:08:42.613+0000] {processor.py:157} INFO - Started process (PID=484) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:08:42.615+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:08:42.619+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:08:42.618+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:08:42.696+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:08:42.705+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:08:42.716+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:08:42.727+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:08:42.755+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:08:42.818+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:08:42.818+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:08:42.876+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:08:42.875+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:08:42.981+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.376 seconds
+[2025-05-07T13:09:13.527+0000] {processor.py:157} INFO - Started process (PID=485) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:09:13.529+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:09:13.531+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:09:13.531+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:09:13.624+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:09:13.633+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:09:13.642+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:09:13.651+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:09:13.676+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:09:13.743+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:09:13.743+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:09:13.817+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:09:13.817+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:09:13.960+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.440 seconds
+[2025-05-07T13:09:44.574+0000] {processor.py:157} INFO - Started process (PID=486) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:09:44.576+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:09:44.579+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:09:44.578+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:09:44.663+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:09:44.681+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:09:44.709+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:09:44.733+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:09:44.768+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:09:44.844+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:09:44.844+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:09:44.891+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:09:44.891+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:09:45.000+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.435 seconds
+[2025-05-07T13:10:15.734+0000] {processor.py:157} INFO - Started process (PID=487) to work on /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:10:15.736+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2025-05-07T13:10:15.738+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:10:15.737+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:10:15.818+0000] {logging_mixin.py:151} INFO - Extract file is Running
+[2025-05-07T13:10:15.828+0000] {logging_mixin.py:151} INFO - 🔵 Transform task started...
+[2025-05-07T13:10:15.840+0000] {logging_mixin.py:151} INFO - Load file Running
+[2025-05-07T13:10:15.854+0000] {logging_mixin.py:151} INFO - retrain file  running
+[2025-05-07T13:10:15.877+0000] {processor.py:839} INFO - DAG(s) dict_keys(['anime_etl_pipeline']) retrieved from /opt/airflow/dags/etl_pipeline.py
+[2025-05-07T13:10:15.934+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:10:15.934+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2025-05-07T13:10:15.992+0000] {logging_mixin.py:151} INFO - [2025-05-07T13:10:15.992+0000] {dag.py:3677} INFO - Setting next_dagrun for anime_etl_pipeline to 2025-05-07T13:00:00+00:00, run_after=2025-05-07T14:00:00+00:00
+[2025-05-07T13:10:16.100+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.374 seconds

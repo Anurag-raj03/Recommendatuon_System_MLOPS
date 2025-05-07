@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/bbaec1f0ebb84931b0a4fe57c795cbeb/artifacts
+end_time: 1744647302078
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: bbaec1f0ebb84931b0a4fe57c795cbeb
+run_name: sincere-dove-582
+run_uuid: bbaec1f0ebb84931b0a4fe57c795cbeb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744647299689
+status: 3
+tags: []
+user_id: root

@@ -1,0 +1,46 @@
+name: ANIME MLOPS CI
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  Continuous-Integration:
+    name: Doing the Continuous Integration
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build and Push Docker Images Using Docker Compose
+        run: |
+          docker compose build
+          
+          docker tag anuragraj03/mlops_recommendation/custom-airflow:latest anuragraj03/mlops_recommendation:custom-airflow
+          docker tag anuragraj03/mlops_recommendation/backend_process:latest anuragraj03/mlops_recommendation:backend_process
+          docker tag anuragraj03/mlops_recommendation/frontend_process:latest anuragraj03/mlops_recommendation:frontend_process
+          docker tag anuragraj03/mlops_recommendation/monitoring_apps:latest anuragraj03/mlops_recommendation:monitoring_apps
+          
+          docker push anuragraj03/mlops_recommendation:custom-airflow
+          docker push anuragraj03/mlops_recommendation:backend_process
+          docker push anuragraj03/mlops_recommendation:frontend_process
+          docker push anuragraj03/mlops_recommendation:monitoring_apps

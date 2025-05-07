@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/a421f96e5f634d499aa9ede182fac9c2/artifacts
+end_time: 1744545175414
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: a421f96e5f634d499aa9ede182fac9c2
+run_name: valuable-ape-526
+run_uuid: a421f96e5f634d499aa9ede182fac9c2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744545158586
+status: 3
+tags: []
+user_id: root

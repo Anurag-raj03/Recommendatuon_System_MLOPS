@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301298098451799760/2268b22d432348d0ab78b1a4c7bcf444/artifacts
+end_time: 1744545458316
+entry_point_name: ''
+experiment_id: '301298098451799760'
+lifecycle_stage: active
+run_id: 2268b22d432348d0ab78b1a4c7bcf444
+run_name: glamorous-doe-516
+run_uuid: 2268b22d432348d0ab78b1a4c7bcf444
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744545454763
+status: 3
+tags: []
+user_id: root

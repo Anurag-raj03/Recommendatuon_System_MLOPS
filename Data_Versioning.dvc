@@ -1,0 +1,6 @@
+outs:
+- md5: 78a6e4719164bed9e80d03ac922555ac.dir
+  size: 5636105
+  nfiles: 4
+  hash: md5
+  path: Data_Versioning
